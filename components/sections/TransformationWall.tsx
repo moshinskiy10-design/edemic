@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { withBasePath } from "@/lib/basePath";
 
 type Review = {
   src: string;
@@ -106,7 +107,7 @@ export function TransformationWall() {
 
               <div className="relative w-full bg-white">
                 <Image
-                  src={review.src}
+                  src={withBasePath(review.src)}
                   alt={review.alt}
                   width={review.width}
                   height={review.height}

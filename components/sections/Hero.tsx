@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LinkButton } from "@/components/ui/Button";
 import { ctaText, quizHref, site } from "@/data/site";
+import { withBasePath } from "@/lib/basePath";
 
 export function Hero() {
   return (
@@ -30,7 +31,7 @@ export function Hero() {
         <div className="relative order-2 md:order-2 md:row-span-2 md:self-center animate-fade-in [animation-delay:120ms]">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-lg border border-forest/10 shadow-lg md:max-w-none">
             <Image
-              src="/founder/steffi-daisy.png"
+              src={withBasePath("/founder/steffi-daisy.png")}
               alt={`${site.founder.fullName} with her Kelpie Daisy at sunset, regional Victoria`}
               fill
               priority

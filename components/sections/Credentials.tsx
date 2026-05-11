@@ -11,17 +11,8 @@ const creds = [
 export function Credentials() {
   return (
     <Section size="sm" tone="cream-200">
-      <Reveal>
-        <div className="text-center">
-          <p className="eyebrow">Credentials</p>
-          <h2 className="mt-3 font-display text-h2 font-bold text-balance text-forest">
-            Australian, accountable, vet-aligned.
-          </h2>
-        </div>
-      </Reveal>
-
       <Reveal delay={0.1}>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {creds.map((c) => (
             <li
               key={c.name}

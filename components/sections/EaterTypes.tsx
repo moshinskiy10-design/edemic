@@ -5,6 +5,7 @@ import { LinkButton } from "@/components/ui/Button";
 import { eaterTypes } from "@/data/eater-types";
 import { ctaText, quizHref } from "@/data/site";
 import { cn } from "@/lib/cn";
+import { withBasePath } from "@/lib/basePath";
 
 const tones = {
   forest: "border-forest/15 hover:border-forest/40",
@@ -44,7 +45,7 @@ export function EaterTypes() {
             style={{ aspectRatio: "2048 / 1080" }}
           >
             <Image
-              src="/before-after.png"
+              src={withBasePath("/before-after.png")}
               alt="Before and after: a hesitant dog transformed into a confident, engaged eater"
               fill
               sizes="(max-width: 768px) 100vw, 36rem"
