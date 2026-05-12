@@ -42,6 +42,7 @@ function base(variant: Variant, size: Size, extra?: string) {
     "transition-all duration-200 ease-emph",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest/40 focus-visible:ring-offset-2 focus-visible:ring-offset-cream",
     "active:translate-y-px",
+    "disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:shadow-md disabled:active:translate-y-0",
     variants[variant],
     sizes[size],
     extra,
