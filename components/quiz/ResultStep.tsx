@@ -25,7 +25,7 @@ export function ResultStep({
   submitted: boolean;
   onRestart: () => void;
 }) {
-  const { type, healthFlagged } = result;
+  const { type } = result;
 
   return (
     <div>
@@ -50,22 +50,6 @@ export function ResultStep({
       <p className="mt-3 text-pretty text-base leading-relaxed text-offblack/75">
         {type.body}
       </p>
-
-      {healthFlagged && (
-        <div className="mt-8 rounded-lg border-2 border-warning/40 bg-warning/10 px-5 py-5">
-          <p className="font-display text-lg font-bold text-warning">
-            See your vet first.
-          </p>
-          <p className="mt-2 text-sm leading-relaxed text-offblack/85">
-            You flagged a possible medical concern (vomiting, weight loss,
-            coat issues, or ongoing soft stools). Edemic Pets is an educational
-            nutrition program — not a veterinary service. Please book in with
-            a registered Australian vet before changing your dog&rsquo;s diet.
-            Once you&rsquo;ve been cleared, the plan we send you will work
-            alongside their advice.
-          </p>
-        </div>
-      )}
 
       <div className="mt-10 rounded-lg border border-forest/15 bg-cream-200/40 px-6 py-6">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-coral-600">
