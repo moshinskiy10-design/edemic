@@ -7,7 +7,7 @@ export const site = {
   founder: {
     firstName: "Steffi",
     fullName: "Steffi Mitchell",
-    credential: "Canine wellness mentor · Member, Pet Professional Guild Australia",
+    credential: "Canine nutritionist · Member, Pet Professional Guild Australia",
     yearsExperience: 12,
     bio:
       "I'm Steffi — based in regional Victoria, raising my own Kelpie, Daisy. I started Edemic after watching dozens of friends' dogs go off their food and chase down expensive 'premium' kibble that never solved the real issue. Picky eating almost always traces back to one of four patterns. Find your dog's pattern and the rest gets simple.",

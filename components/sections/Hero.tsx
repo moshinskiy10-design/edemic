@@ -16,7 +16,7 @@ export function Hero() {
         {/* Title block — appears first on mobile, top-left on desktop */}
         <div className="order-1 md:order-1 animate-fade-up">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-coral-600">
-            1-on-1 canine wellness mentorship
+            Australian canine nutrition guidance
           </p>
 
           <h1 className="mt-5 font-display text-hero font-bold tracking-tight text-balance text-forest">
@@ -46,7 +46,7 @@ export function Hero() {
               {site.founder.fullName} &middot; Daisy
             </p>
             <p className="mt-1 text-stone">
-              Canine wellness mentor &middot; {site.founder.yearsExperience}+
+              Canine nutritionist &middot; {site.founder.yearsExperience}+
               years
             </p>
             <p className="text-stone">{site.founder.photoCaption}</p>
@@ -61,15 +61,15 @@ export function Hero() {
         <div className="order-3 md:order-3 md:col-start-1 animate-fade-up">
           <div className="max-w-prose space-y-4 text-pretty text-base leading-relaxed text-offblack/85 md:text-lg">
             <p>
-              As an Australian canine wellness mentor with{" "}
-              {site.founder.yearsExperience}+ years of experience,
-              Steffi&rsquo;s mission is simple: pair you with a real human
-              mentor — not a chatbot, not a forum — and walk your dog out of
-              picky eating one weekly call at a time.
+              As an Australian canine nutritionist with{" "}
+              {site.founder.yearsExperience}+ years in the field,
+              Steffi&rsquo;s mission is simple: hand you a personalised written
+              plan — not a generic feeding chart — and a four-pattern framework
+              that pinpoints why your dog won&rsquo;t eat.
             </p>
             <p>
-              You get 1-on-1 mentorship, a four-pattern picky-eater framework,
-              the free 60-second quiz, and a {site.guaranteeDays}-day
+              You get a tailored feeding plan, the four-pattern picky-eater
+              framework, the free 60-second quiz, and a {site.guaranteeDays}-day
               money-back promise. Daisy, her Kelpie, is the original test case.
             </p>
           </div>

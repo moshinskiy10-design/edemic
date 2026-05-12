@@ -55,8 +55,8 @@ export function CourseProgram() {
       <Reveal delay={0.25}>
         <div className="mt-12 flex flex-col items-start gap-3 md:flex-row md:items-center md:justify-between">
           <p className="max-w-lg text-base text-offblack/70">
-            Every program tier is built around 1-on-1 mentorship. The quiz
-            tells you which tier fits your dog&rsquo;s pattern.
+            Every tier is built around the same curriculum and your dog&rsquo;s
+            personalised written plan. The quiz tells you which tier fits.
           </p>
           <LinkButton href={quizHref} size="lg">
             Find Your Dog&rsquo;s Type →

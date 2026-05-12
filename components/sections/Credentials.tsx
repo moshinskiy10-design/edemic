@@ -5,7 +5,7 @@ const creds = [
   { name: "Pet Professional Guild Australia", note: "Force-free practice" },
   { name: "Delta Institute graduate", note: "Behaviour fundamentals" },
   { name: "AU Privacy Act 1988", note: "Compliant data handling" },
-  { name: "Vet-aligned protocols", note: "Health-sensitive routing" },
+  { name: "Vet-first routing", note: "Sensitive cases referred to your vet" },
 ];
 
 export function Credentials() {
@@ -26,8 +26,8 @@ export function Credentials() {
           ))}
         </ul>
         <p className="mt-6 text-center text-xs text-stone">
-          Edemic Pets is an educational mentorship, not a veterinary service.
-          See a registered vet for medical concerns.
+          Edemic Pets is an educational nutrition program, not a veterinary
+          service. For medical concerns, please see a registered Australian vet.
         </p>
       </Reveal>
     </Section>

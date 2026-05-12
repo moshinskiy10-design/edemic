@@ -31,7 +31,7 @@ export function FounderIntro() {
           <Reveal>
             <p className="eyebrow">Meet your founder</p>
             <h2 className="mt-4 font-display text-h1 font-bold text-balance text-forest">
-              {site.founder.firstName}, a mentor who&rsquo;s lived the picky-eater years.
+              {site.founder.firstName}, a canine nutritionist who&rsquo;s lived the picky-eater years.
             </h2>
           </Reveal>
 
@@ -43,7 +43,7 @@ export function FounderIntro() {
 
           <Reveal delay={0.15}>
             <div className="mt-6 flex flex-wrap gap-2">
-              <Pill tone="forest">{site.founder.yearsExperience}+ years mentoring</Pill>
+              <Pill tone="forest">{site.founder.yearsExperience}+ years in canine nutrition</Pill>
               <Pill tone="coral">Pet Professional Guild Australia</Pill>
               <Pill tone="stone">Regional VIC based</Pill>
             </div>

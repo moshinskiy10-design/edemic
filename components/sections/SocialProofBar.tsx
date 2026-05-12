@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 const items = [
   { stat: "1,000+", label: "Aussie dog parents helped" },
   { stat: "4", label: "eater types · proven framework" },
-  { stat: "4.9★", label: "average mentor rating" },
+  { stat: "4.9★", label: "average program rating" },
   { stat: "PPGA", label: "Pet Professional Guild member" },
   { stat: "60-day", label: "money-back guarantee" },
 ];

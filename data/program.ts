@@ -1,29 +1,29 @@
 export const courseProgram = {
   eyebrow: "The curriculum",
-  heading: "A mentor-led program built around your dog",
+  heading: "A structured program built around your dog's pattern",
   subhead:
-    "Twelve focused modules, weekly 1-on-1 mentor calls, and a private feed where Steffi answers questions in plain English — usually within a day.",
+    "Twelve focused modules, a personalised written feeding plan, and an Aussie-tailored ingredient guide — designed to make picky eating predictable, not stressful.",
   stats: [
     { value: "12", label: "modules" },
     { value: "20+", label: "lessons" },
     { value: "5h", label: "video, no filler" },
-    { value: "1-on-1", label: "weekly mentor calls" },
+    { value: "4", label: "eater types covered" },
   ],
   highlights: [
     {
-      title: "Mentor-paced, not self-paced",
+      title: "A written plan, built for your dog",
       body:
-        "Every week you book a 30-minute call with Steffi. She reviews the past seven days, adjusts the plan, and answers what the lessons don't.",
+        "After the quiz, you get a personalised feeding plan for your dog's eater type — not a generic checklist. Each module references the plan, so you always know which step you're on.",
     },
     {
-      title: "Real conversations, in writing",
+      title: "Aussie pantry, Aussie brands",
       body:
-        "Send a photo of the bowl, a clip of the walk, a paragraph about last night — Steffi reads everything and replies inside the program, not on a forum.",
+        "Ingredient guides, brand notes, and seasonal tips all assume an Australian household. No US-only kibble brands, no celsius/fahrenheit confusion, no overseas vet advice.",
     },
     {
       title: "Built around four eater types",
       body:
-        "Anxious. Bored. Inconsistent. Sensitive. The plan you get is the plan for your dog's pattern — not a generic feeding checklist.",
+        "Anxious. Bored. Spoiled. Health-sensitive. The plan you get is the plan for your dog's pattern — not a one-size-fits-all feeding template.",
     },
   ],
 };
@@ -34,7 +34,7 @@ export const successTiers = [
     name: "Base",
     eyebrow: "For self-paced owners",
     summary:
-      "The full curriculum, the assessment, and the written plan. No mentor calls — you work through it on your own time.",
+      "The full curriculum, the assessment, and the written plan. Work through it on your own schedule.",
     priceAnchor: "$99 AUD",
     price: "$84 AUD",
     discount: "Save 15%",
@@ -44,20 +44,21 @@ export const successTiers = [
       "Full 12-module video curriculum",
       "Personalised eater-type assessment",
       "Written feeding plan tailored to your dog",
+      "60-day money-back guarantee",
     ],
     excludes: [
-      "Weekly 1-on-1 mentor calls",
-      "Direct message access to Steffi",
-      "Plan revisions as your dog progresses",
+      "Private community access",
+      "Email Q&A support",
+      "Plan refresh kit",
     ],
     cta: { label: "Start with Base →", href: "/quiz" },
   },
   {
     slug: "optimal",
     name: "Optimal",
-    eyebrow: "With monthly mentorship",
+    eyebrow: "With written support",
     summary:
-      "Everything in Base, plus a monthly 1-on-1 call with Steffi and message access between calls.",
+      "Everything in Base, plus email Q&A access and a private community of Aussie dog parents working the same plan.",
     priceAnchor: "$249 AUD",
     price: "$211 AUD",
     discount: "Save 15%",
@@ -65,44 +66,41 @@ export const successTiers = [
     badge: "Most chosen",
     includes: [
       "Everything in Base",
-      "One 30-minute 1-on-1 call per month with Steffi",
-      "Direct message support, replies within 24h on weekdays",
-      "Plan revisions as your dog progresses",
-      "Vet-aligned bowl audits and brand notes",
+      "Email Q&A access, replies within 2 business days",
+      "Plan refresh kit when your dog levels up",
       "Private community of Aussie dog parents",
-      "Founder-recorded answers to your specific questions",
+      "Aussie ingredient sourcing guide",
+      "Lifetime updates to the curriculum",
     ],
     excludes: [
-      "Weekly 1-on-1 calls",
-      "On-call follow-up between scheduled calls",
+      "Label-reading workshop",
+      "AU brand audit library",
     ],
     cta: { label: "Choose Optimal →", href: "/quiz" },
   },
   {
-    slug: "mentorship",
-    name: "Mentorship",
-    eyebrow: "Maximum 1-on-1 support",
+    slug: "premium",
+    name: "Premium",
+    eyebrow: "Maximum written depth",
     summary:
-      "Weekly 1-on-1 mentor calls, written follow-ups after every session, and the founder on speed-dial. For dogs whose pattern needs hands-on tuning.",
+      "Every resource we publish, plus next-business-day email replies. For owners who want the deepest reference library on Aussie picky eating.",
     priceAnchor: "$549 AUD",
     price: "$466 AUD",
     discount: "Save 15%",
     tone: "coral" as const,
-    badge: "Hands-on",
+    badge: "Most in-depth",
     includes: [
       "Everything in Optimal",
-      "Weekly 30-minute 1-on-1 calls with Steffi",
-      "Written recap and revised plan after every call",
-      "Same-day message support, weekdays",
-      "Vet-coordination: Steffi liaises with your GP vet on request",
-      "Video review of mealtimes and walks",
-      "Behaviour cue audits with annotated feedback",
-      "Founder accountability: scheduled check-ins, not just on-demand",
+      "Priority email Q&A, next business day reply",
+      "Label-reading workshop (90 min, recorded)",
+      "AU brand audit library, updated quarterly",
+      "Bonus modules on enrichment and rotation feeding",
+      "Health-flag worksheet to take to your vet",
     ],
     excludes: [],
-    cta: { label: "Apply for Mentorship →", href: "/quiz" },
+    cta: { label: "Choose Premium →", href: "/quiz" },
   },
 ];
 
 export const programNote =
-  "Every tier includes the 60-day money-back guarantee. Prices in Australian dollars, GST inclusive. Cancel anytime — your plan is yours to keep.";
+  "Every tier includes the 60-day money-back guarantee. Prices in Australian dollars, GST inclusive. Cancel anytime — your plan is yours to keep. Edemic Pets is an educational nutrition program — not a veterinary service. For medical concerns, please see a registered Australian veterinarian.";

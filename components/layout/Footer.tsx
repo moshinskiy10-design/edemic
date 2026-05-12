@@ -23,7 +23,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-prose text-sm text-stone">
-              Australian-owned canine wellness mentorship. Founded in regional
+              Australian-owned canine nutrition program. Founded in regional
               Victoria, built for Aussie households.
             </p>
           </div>
@@ -62,9 +62,10 @@ export function Footer() {
               {site.legalName} · ABN {site.abn}
             </p>
             <p className="mt-2 text-xs leading-relaxed text-stone/80">
-              Edemic Pets is an educational mentorship. It is not a substitute
-              for veterinary care. Always consult a registered veterinarian for
-              medical concerns.
+              Edemic Pets is an educational nutrition program. It is not a
+              veterinary service and does not diagnose or treat medical
+              conditions. Always consult a registered Australian veterinarian
+              for medical concerns.
             </p>
           </div>
         </div>

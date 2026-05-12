@@ -13,9 +13,9 @@ export function FinalCTA() {
             You&rsquo;ve scrolled this far. Sixty more seconds gets you a plan.
           </h2>
           <p className="mt-5 max-w-prose text-pretty text-lg text-offblack/80">
-            The quiz is the only homework. Everything else — the email
-            micro-course, the free 15-minute 1-on-1 call with Steffi, the{" "}
-            {site.guaranteeDays}-day guarantee — is on us.
+            The quiz is the only homework. Everything else — the free 5-day
+            email micro-course tuned to your dog&rsquo;s eater type, and the{" "}
+            {site.guaranteeDays}-day money-back guarantee — is on us.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <LinkButton href={quizHref} size="lg">

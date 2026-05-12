@@ -4,27 +4,27 @@ import { Reveal } from "@/components/ui/Reveal";
 const inside = [
   {
     title: "A 60-second segmentation quiz",
-    body: "Seven questions designed by a behaviour mentor — not a marketer. You get a type, not a tier.",
+    body: "Seven questions designed by a canine nutritionist — not a marketer. You get a type, not a tier.",
   },
   {
-    title: "A free 5-day micro-course",
-    body: "Daily emails tuned to your dog's type. No upsell — these arrive whether you book or not.",
+    title: "A free 5-day email micro-course",
+    body: "Daily emails tuned to your dog's type. No upsell — these arrive whether you buy the program or not.",
   },
   {
-    title: "A free 15-minute 1-on-1 call",
-    body: "Book a discovery call with Steffi for a human read on your dog's pattern. Phone or Zoom. Australian hours.",
+    title: "A personalised written plan",
+    body: "After the quiz, you receive a written feeding plan built for your dog's eater type — clear steps, not a generic checklist.",
   },
   {
-    title: "Weekly 1-on-1 mentor calls",
-    body: "On the Optimal and Mentorship tiers, Steffi runs your plan with you week by week — not from a template.",
+    title: "Twelve focused video modules",
+    body: "Bite-sized lessons (5 hours total, no filler) covering anxious, bored, spoiled, and health-sensitive patterns.",
   },
   {
-    title: "A vet-aligned safety net",
-    body: "Health-sensitive dogs get a vet checklist and we explicitly route you to your local vet first.",
+    title: "Vet-first health routing",
+    body: "Health-sensitive dogs get a printable vet-conversation worksheet. We always route medical concerns to a registered Australian vet first.",
   },
   {
     title: "Australian context throughout",
-    body: "Pantry assumptions, brand names, weather notes, all written for Australian households.",
+    body: "Pantry assumptions, brand names, seasonal notes — all written for Australian households, not US imports.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function Methodology() {
       <Reveal>
         <p className="eyebrow">What&rsquo;s inside</p>
         <h2 className="mt-3 max-w-3xl font-display text-h1 font-bold text-balance text-forest">
-          Less a course, more 1-on-1 mentorship in your pocket.
+          More than a course — a personalised plan, built around your dog.
         </h2>
       </Reveal>
 

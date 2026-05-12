@@ -33,7 +33,7 @@ export const socialProofEvents: SocialProofEvent[] = [
   {
     name: "Tom K.",
     city: "Perth, WA",
-    action: "booked a free 15-min mentor call",
+    action: "started the free 5-day email course",
     timeAgo: "7 minutes ago",
     mapTile: "https://tile.openstreetmap.org/11/1683/1216.png",
   },

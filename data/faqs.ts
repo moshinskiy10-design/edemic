@@ -7,7 +7,7 @@ export const faqs: FAQ[] = [
   },
   {
     q: "Is this a substitute for a vet?",
-    a: "No. If your dog has worrying symptoms — vomiting, weight loss, hot spots, soft stools — please see your vet first. Our health-sensitive plan is designed to run alongside a vet, not replace one.",
+    a: "No. Edemic Pets is an educational nutrition program, not a veterinary service, and we don't diagnose or treat medical conditions. If your dog has worrying symptoms — vomiting, weight loss, hot spots, soft stools — please see a registered Australian vet first. Our health-sensitive content is designed to run alongside vet care, not replace it.",
   },
   {
     q: "Is the program based on Australian conditions?",
@@ -22,8 +22,8 @@ export const faqs: FAQ[] = [
     a: "No. The plan starts with what's already in your pantry. We add or remove ingredients as we go. Most owners save money over three months.",
   },
   {
-    q: "How much hand-holding do I get?",
-    a: "After the quiz you can take a free 15-minute call with Steffi, or jump straight into the $47 self-guided program. The full mentorship tier includes weekly check-ins.",
+    q: "How much support do I get?",
+    a: "Support is written, not over the phone. The free 5-day email micro-course arrives whether or not you upgrade. Optimal and Premium tiers add email Q&A access and a private Aussie-owner community. Everything is asynchronous and Aussie-time friendly.",
   },
   {
     q: "What's the money-back policy?",

@@ -31,9 +31,9 @@ export function EaterTypes() {
             Picky eating is rarely about the food. It&rsquo;s a pattern.
           </h2>
           <p className="mt-5 max-w-prose text-pretty text-lg leading-relaxed text-offblack/80">
-            We&rsquo;ve sorted years of mentorship conversations into four
-            common patterns. Most dogs land squarely in one. The plan starts as
-            soon as you know which.
+            We&rsquo;ve sorted years of Aussie picky-eater cases into four
+            common patterns. Most dogs land squarely in one. The plan starts
+            as soon as you know which.
           </p>
         </Reveal>
         <Reveal
