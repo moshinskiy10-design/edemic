@@ -19,25 +19,36 @@ import { site } from "@/data/site";
 import { QuestionStep } from "./QuestionStep";
 import { EmailGate } from "./EmailGate";
 import { ResultStep } from "./ResultStep";
+import {
+  DogDetailsStep,
+  emptyDogDetails,
+  isDogDetailsValid,
+  type DogDetails,
+} from "./DogDetailsStep";
 
-type Stage = "question" | "email" | "result";
+type Stage = "question" | "details" | "email" | "result";
 
 export function QuizFlow() {
   const [stage, setStage] = useState<Stage>("question");
   const [qIndex, setQIndex] = useState(0);
   const [state, setState] = useState<QuizState>(emptyQuizState());
+  const [details, setDetails] = useState<DogDetails>(emptyDogDetails());
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const total = quizQuestions.length;
   const current = quizQuestions[qIndex];
   const answered = isQuestionAnswered(state, qIndex);
+  const detailsValid = isDogDetailsValid(details);
 
+  // Progress denominator: 7 questions + details + email = 9 steps total.
+  const totalSteps = total + 2;
   const progress = useMemo(() => {
     if (stage === "result") return 100;
-    if (stage === "email") return Math.round(((total + 0.5) / (total + 1)) * 100);
-    return Math.round(((qIndex + (answered ? 1 : 0)) / (total + 1)) * 100);
-  }, [stage, qIndex, answered, total]);
+    if (stage === "email") return Math.round(((total + 1.5) / totalSteps) * 100);
+    if (stage === "details") return Math.round(((total + 0.5) / totalSteps) * 100);
+    return Math.round(((qIndex + (answered ? 1 : 0)) / totalSteps) * 100);
+  }, [stage, qIndex, answered, total, totalSteps]);
 
   function setAnswer(ai: number, multi: boolean) {
     setState((prev) => {
@@ -57,26 +68,41 @@ export function QuizFlow() {
   function goNext() {
     if (!answered) return;
     if (qIndex < total - 1) setQIndex((i) => i + 1);
-    else setStage("email");
+    else setStage("details");
   }
 
   function goBack() {
     if (stage === "email") {
+      setStage("details");
+      return;
+    }
+    if (stage === "details") {
       setStage("question");
       return;
     }
     if (qIndex > 0) setQIndex((i) => i - 1);
   }
 
+  function submitDetails() {
+    if (!detailsValid) return;
+    setStage("email");
+  }
+
   function submitEmail() {
     if (!isValidEmail(email)) return;
-    // Stub: in production this hits ConvertKit/Klaviyo/Formspree.
-    // For the static export we just persist locally and reveal the result.
+    // Stub: in production this hits ConvertKit/Klaviyo/Formspree and triggers
+    // the personalised plan email (using dog name, age, breed, weight, notes
+    // alongside the computed eater type).
     if (typeof window !== "undefined") {
       try {
         window.localStorage.setItem(
           "edemic.quiz",
-          JSON.stringify({ email, answers: state.answers, at: Date.now() }),
+          JSON.stringify({
+            email,
+            answers: state.answers,
+            details,
+            at: Date.now(),
+          }),
         );
       } catch {}
     }
@@ -87,6 +113,7 @@ export function QuizFlow() {
   function restart() {
     setState(emptyQuizState());
     setQIndex(0);
+    setDetails(emptyDogDetails());
     setEmail("");
     setSubmitted(false);
     setStage("question");
@@ -151,6 +178,18 @@ export function QuizFlow() {
             </motion.div>
           )}
 
+          {stage === "details" && (
+            <motion.div
+              key="details"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.28, ease: easeEmph }}
+            >
+              <DogDetailsStep details={details} onChange={setDetails} />
+            </motion.div>
+          )}
+
           {stage === "email" && (
             <motion.div
               key="email"
@@ -178,6 +217,7 @@ export function QuizFlow() {
               <ResultStep
                 result={result}
                 tier={recommendedTier}
+                details={details}
                 email={email}
                 submitted={submitted}
                 onRestart={restart}
@@ -201,23 +241,34 @@ export function QuizFlow() {
             ← Back
           </button>
 
-          {stage === "question" ? (
+          {stage === "question" && (
             <Button
               onClick={goNext}
               disabled={!answered}
               size="lg"
               className="min-w-[180px]"
             >
-              {qIndex === total - 1 ? "See my result" : "Next"} →
+              {qIndex === total - 1 ? "Almost there" : "Next"} →
             </Button>
-          ) : (
+          )}
+          {stage === "details" && (
+            <Button
+              onClick={submitDetails}
+              disabled={!detailsValid}
+              size="lg"
+              className="min-w-[180px]"
+            >
+              Continue →
+            </Button>
+          )}
+          {stage === "email" && (
             <Button
               onClick={submitEmail}
               disabled={!isValidEmail(email)}
               size="lg"
               className="min-w-[180px]"
             >
-              Get my plan →
+              Email my plan →
             </Button>
           )}
         </footer>

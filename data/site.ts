@@ -33,3 +33,7 @@ export const ctaText = {
 };
 
 export const quizHref = "/quiz";
+
+// Placeholder — replace with the real Calendly link when the booking page
+// is set up. Used on the quiz result page for the free 15-min discovery call.
+export const calendlyHref = "https://calendly.com/edemic-pets/15min";

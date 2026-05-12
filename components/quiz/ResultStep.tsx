@@ -1,16 +1,17 @@
 "use client";
 
 import { LinkButton } from "@/components/ui/Button";
-import { cn } from "@/lib/cn";
 import type { EaterType } from "@/data/eater-types";
 import type { successTiers } from "@/data/program";
-import { site } from "@/data/site";
+import { calendlyHref, site } from "@/data/site";
+import type { DogDetails } from "./DogDetailsStep";
 
 type Tier = (typeof successTiers)[number];
 
 export function ResultStep({
   result,
   tier,
+  details,
   email,
   submitted,
   onRestart,
@@ -21,29 +22,38 @@ export function ResultStep({
     healthFlagged: boolean;
   };
   tier: Tier;
+  details: DogDetails;
   email: string;
   submitted: boolean;
   onRestart: () => void;
 }) {
   const { type } = result;
+  const name = details.name.trim() || "Your dog";
+  const ageLabel = formatAge(details.ageYears, details.ageMonths);
+  const breed = details.breed.trim();
+  const descriptor = [ageLabel, breed].filter(Boolean).join(" ");
+  const fullDescriptor = descriptor ? `your ${descriptor}` : "your dog";
 
   return (
     <div>
       {submitted && (
         <div className="mb-8 rounded-lg border border-forest/20 bg-forest/5 px-5 py-4 text-sm text-offblack/85">
           <p>
-            <strong className="text-forest">Sent.</strong> Your plan and the
-            first email are on their way to{" "}
+            <strong className="text-forest">Sent.</strong> {name}&rsquo;s
+            personalised plan and the first email are on their way to{" "}
             <span className="font-semibold">{email}</span>. Check spam if it
             hasn&rsquo;t landed in 2 minutes.
           </p>
         </div>
       )}
 
-      <p className="eyebrow">Your dog is type {type.number}</p>
+      <p className="eyebrow">Result · type {type.number}</p>
       <h1 className="mt-3 font-display text-4xl font-bold text-balance text-forest md:text-5xl">
-        {type.name}
+        {name} is {articleFor(type.name)} {type.name}.
       </h1>
+      <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-stone">
+        Plan tailored for {fullDescriptor}
+      </p>
       <p className="mt-5 text-pretty text-lg leading-relaxed text-offblack/85">
         {type.oneLiner}
       </p>
@@ -53,7 +63,7 @@ export function ResultStep({
 
       <div className="mt-10 rounded-lg border border-forest/15 bg-cream-200/40 px-6 py-6">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-coral-600">
-          Three things to try this week
+          Three things to try this week with {name}
         </p>
         <ul className="mt-4 space-y-3 text-base text-offblack/85">
           {immediateWins(type.slug).map((w) => (
@@ -66,54 +76,87 @@ export function ResultStep({
             </li>
           ))}
         </ul>
+        <p className="mt-5 text-xs text-stone">
+          Your full written plan — feeding amounts, treat caps, AU brand
+          notes — is in your inbox. Look for an email from Steffi at Edemic.
+        </p>
       </div>
 
       <div className="mt-10 rounded-lg border-2 border-coral/40 bg-cream px-6 py-7 shadow-sm">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-stone">
-          We recommend
+          Recommended next step
         </p>
         <h2 className="mt-2 font-display text-2xl font-bold text-forest">
-          {tier.name} —{" "}
+          Start the {tier.name} program —{" "}
           <span className="text-coral-600">{tier.price}</span>
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-offblack/80">
-          {tier.summary} Built around the {type.name.toLowerCase()} pattern,
-          with the full curriculum, a personalised written plan, and a {site.guaranteeDays}
-          -day money-back guarantee.
+          Built around the {type.name.toLowerCase()} pattern, with the full
+          curriculum, {name}&rsquo;s personalised written plan, and a{" "}
+          {site.guaranteeDays}-day money-back guarantee.
         </p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <LinkButton href={tier.cta.href} size="lg" className="w-full sm:w-auto">
+          <LinkButton href={tier.cta.href} size="lg" className="flex-1 sm:flex-none">
             Start with {tier.name} →
           </LinkButton>
-          <button
-            type="button"
-            onClick={onRestart}
-            className="text-sm font-semibold text-stone hover:text-forest"
+          <LinkButton
+            href={calendlyHref}
+            size="lg"
+            variant="ghost"
+            className="flex-1 sm:flex-none"
           >
-            Retake the quiz
-          </button>
+            Book a free 15-min call →
+          </LinkButton>
         </div>
 
         <p className="mt-5 text-xs text-stone">
-          Prefer to see all three tiers?{" "}
+          Not sure which tier?{" "}
           <a href="/#pricing" className="text-forest underline underline-offset-4">
             Compare Base, Optimal, and Premium
           </a>
-          .
+          . Want to talk it through first? The 15-min call is free, no card
+          needed.
         </p>
       </div>
 
-      <p
-        className={cn(
-          "mt-10 rounded-lg bg-forest px-5 py-4 text-center text-sm text-cream",
-        )}
+      <button
+        type="button"
+        onClick={onRestart}
+        className="mt-8 text-sm font-semibold text-stone hover:text-forest"
       >
-        Your first email arrives in under 2 minutes. Day 5 wraps up the free
+        Retake the quiz
+      </button>
+
+      <p className="mt-10 rounded-lg bg-forest px-5 py-4 text-center text-sm text-cream">
+        Your first email arrives in under 2 minutes. Day 5 wraps the free
         course — read those first, then decide.
       </p>
     </div>
   );
+}
+
+function articleFor(name: string): string {
+  return /^[aeiouAEIOU]/.test(name) ? "an" : "a";
+}
+
+function formatAge(yearsRaw: string, monthsRaw: string): string {
+  const y = Number(yearsRaw);
+  const m = Number(monthsRaw);
+  const yearsOk = !Number.isNaN(y) && yearsRaw !== "";
+  const monthsOk = !Number.isNaN(m) && monthsRaw !== "" && m > 0;
+  if (!yearsOk && !monthsOk) return "";
+  if (yearsOk && y === 0 && monthsOk) {
+    return `${m}-month-old`;
+  }
+  if (yearsOk && y > 0 && monthsOk) {
+    return `${y}-year-old`;
+  }
+  if (yearsOk && y > 0) {
+    return `${y}-year-old`;
+  }
+  if (monthsOk) return `${m}-month-old`;
+  return "";
 }
 
 function immediateWins(slug: EaterType["slug"]): string[] {
@@ -138,9 +181,9 @@ function immediateWins(slug: EaterType["slug"]): string[] {
       ];
     case "health-sensitive":
       return [
-        "Book a vet appointment in the next 7 days if you haven't already. Bring a 3-day food + symptom diary.",
-        "Don't change the food yet — your vet needs to see the current baseline to spot patterns.",
-        "Keep a daily log: what went in, what came out, energy level, scratching. Three rows a day, 14 days.",
+        "Keep a simple food + symptom diary for 14 days — three rows a day: what went in, what came out, energy and itch level.",
+        "Don't switch foods or brands during the diary window — your baseline is the data the plan is built on.",
+        "Bring the diary to your next routine vet visit. The plan we email you is designed to slot alongside their advice.",
       ];
   }
 }
