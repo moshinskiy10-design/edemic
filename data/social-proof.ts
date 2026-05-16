@@ -33,14 +33,14 @@ export const socialProofEvents: SocialProofEvent[] = [
   {
     name: "Tom K.",
     city: "Perth, WA",
-    action: "started the free 5-day email course",
+    action: "downloaded the free nutrition guides",
     timeAgo: "7 minutes ago",
     mapTile: "https://tile.openstreetmap.org/11/1683/1216.png",
   },
   {
     name: "Aisha R.",
     city: "Newcastle, NSW",
-    action: "received her personalised feeding plan",
+    action: "joined 1:1 chat mentorship with Steffi",
     timeAgo: "11 minutes ago",
     mapTile: "https://tile.openstreetmap.org/11/1887/1222.png",
   },

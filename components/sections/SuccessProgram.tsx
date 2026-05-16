@@ -45,9 +45,10 @@ export function SuccessProgram() {
             Select your <span className="text-coral-600">Success Program</span>
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-offblack/80">
-            Three tiers, all built around the same curriculum and your dog&rsquo;s
-            personalised written plan. The difference is how much written support
-            and reference material you want alongside it.
+            Three tiers, all built around the same nutrition curriculum and
+            1:1 mentorship in a private chat with Steffi — by the hand, every
+            step. The difference is how much chat access and reference
+            material you want alongside it.
           </p>
         </Reveal>
       </div>

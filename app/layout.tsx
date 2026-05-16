@@ -18,7 +18,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Edemic Pets — Why won't your dog eat?",
   description:
-    "Most picky eaters fall into 1 of 4 types. Find your dog's type in 60 seconds — and get a free personalised feeding plan from an Aussie founder.",
+    "Most picky eaters fall into 1 of 4 types. Find your dog's type in 60 seconds — and get free nutrition guides plus 1:1 chat mentorship from an Aussie canine nutritionist.",
   metadataBase: new URL("https://edemic.com.au"),
   openGraph: {
     title: "Edemic Pets — Why won't your dog eat?",

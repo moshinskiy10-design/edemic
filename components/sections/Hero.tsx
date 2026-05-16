@@ -63,13 +63,15 @@ export function Hero() {
             <p>
               As an Australian canine nutritionist with{" "}
               {site.founder.yearsExperience}+ years in the field,
-              Steffi&rsquo;s mission is simple: hand you a personalised written
-              plan — not a generic feeding chart — and a four-pattern framework
-              that pinpoints why your dog won&rsquo;t eat.
+              Steffi&rsquo;s mission is simple: turn <em>you</em> into the
+              expert on your dog&rsquo;s bowl. No generic feeding charts.
+              You learn the principles, build the plan yourself, and have
+              Steffi by your side in chat the whole way.
             </p>
             <p>
-              You get a tailored feeding plan, the four-pattern picky-eater
-              framework, the free 60-second quiz, and a {site.guaranteeDays}-day
+              You get 1:1 mentorship in a private chat — by the hand, every
+              step — the four-pattern picky-eater framework, free nutrition
+              guides by email, the free 60-second quiz, and a {site.guaranteeDays}-day
               money-back promise. Daisy, her Kelpie, is the original test case.
             </p>
           </div>

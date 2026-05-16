@@ -1,29 +1,29 @@
 export const courseProgram = {
-  eyebrow: "The curriculum",
-  heading: "A structured program built around your dog's pattern",
+  eyebrow: "How we work",
+  heading: "We teach you — so you build the perfect bowl yourself",
   subhead:
-    "Twelve focused modules, a personalised written feeding plan, and an Aussie-tailored ingredient guide — designed to make picky eating predictable, not stressful.",
+    "Edemic Pets isn't a do-this-eat-that feeding chart. It's a full education in canine nutrition, paired with 1:1 mentorship in a private chat with Steffi — so you finish as the expert on your own dog's food.",
   stats: [
-    { value: "12", label: "modules" },
-    { value: "20+", label: "lessons" },
-    { value: "5h", label: "video, no filler" },
-    { value: "4", label: "eater types covered" },
+    { value: "1:1", label: "private chat with Steffi" },
+    { value: "12", label: "nutrition modules" },
+    { value: "4", label: "eater patterns covered" },
+    { value: "60d", label: "money-back guarantee" },
   ],
   highlights: [
     {
-      title: "A written plan, built for your dog",
+      title: "You become the expert",
       body:
-        "After the quiz, you get a personalised feeding plan for your dog's eater type — not a generic checklist. Each module references the plan, so you always know which step you're on.",
+        "Instead of handing you a plan that goes stale in a month, we teach you the principles of canine nutrition — so you can build, adjust, and trust your dog's bowl through every life stage.",
+    },
+    {
+      title: "1:1 mentorship in private chat — by the hand",
+      body:
+        "The core of the program is direct chat access to Steffi. Ask anything, photograph the bowl, send a label — you get real answers from a canine nutritionist, not a chatbot. Video lessons are one option; the mentorship is the difference.",
     },
     {
       title: "Aussie pantry, Aussie brands",
       body:
         "Ingredient guides, brand notes, and seasonal tips all assume an Australian household. No US-only kibble brands, no celsius/fahrenheit confusion, no overseas vet advice.",
-    },
-    {
-      title: "Built around four eater types",
-      body:
-        "Anxious. Bored. Spoiled. Health-sensitive. The plan you get is the plan for your dog's pattern — not a one-size-fits-all feeding template.",
     },
   ],
 };
@@ -32,33 +32,33 @@ export const successTiers = [
   {
     slug: "base",
     name: "Base",
-    eyebrow: "For self-paced owners",
+    eyebrow: "Self-paced learning",
     summary:
-      "The full curriculum, the assessment, and the written plan. Work through it on your own schedule.",
+      "The full nutrition curriculum and the four-pattern framework. Work through it on your own and start building your dog's bowl from first principles.",
     priceAnchor: "$99 AUD",
     price: "$84 AUD",
     discount: "Save 15%",
     tone: "stone" as const,
     badge: null as string | null,
     includes: [
-      "Full 12-module video curriculum",
-      "Personalised eater-type assessment",
-      "Written feeding plan tailored to your dog",
+      "Full 12-module nutrition curriculum (video + written)",
+      "The four-pattern eater-type framework",
+      "Aussie pantry & ingredient guides",
       "60-day money-back guarantee",
     ],
     excludes: [
+      "1:1 chat mentorship with Steffi",
+      "Plan reviews — get your draft checked",
       "Private community access",
-      "Email Q&A support",
-      "Plan refresh kit",
     ],
     cta: { label: "Start with Base →", href: "/quiz" },
   },
   {
     slug: "optimal",
     name: "Optimal",
-    eyebrow: "With written support",
+    eyebrow: "With chat mentorship",
     summary:
-      "Everything in Base, plus email Q&A access and a private community of Aussie dog parents working the same plan.",
+      "Everything in Base, plus 1:1 mentorship in a private chat with Steffi — by the hand, every step. This is our flagship.",
     priceAnchor: "$249 AUD",
     price: "$211 AUD",
     discount: "Save 15%",
@@ -66,24 +66,24 @@ export const successTiers = [
     badge: "Most chosen",
     includes: [
       "Everything in Base",
-      "Email Q&A access, replies within 2 business days",
-      "Plan refresh kit when your dog levels up",
+      "1:1 private chat mentorship with Steffi (2 business-day replies)",
+      "Plan reviews — send your draft, get notes back",
       "Private community of Aussie dog parents",
       "Aussie ingredient sourcing guide",
       "Lifetime updates to the curriculum",
     ],
     excludes: [
+      "Priority next-business-day chat replies",
       "Label-reading workshop",
-      "AU brand audit library",
     ],
     cta: { label: "Choose Optimal →", href: "/quiz" },
   },
   {
     slug: "premium",
     name: "Premium",
-    eyebrow: "Maximum written depth",
+    eyebrow: "Priority chat mentorship",
     summary:
-      "Every resource we publish, plus next-business-day email replies. For owners who want the deepest reference library on Aussie picky eating.",
+      "Everything in Optimal, plus priority next-business-day chat replies and the full reference library. For owners who want the deepest support and the fastest answers.",
     priceAnchor: "$549 AUD",
     price: "$466 AUD",
     discount: "Save 15%",
@@ -91,7 +91,7 @@ export const successTiers = [
     badge: "Most in-depth",
     includes: [
       "Everything in Optimal",
-      "Priority email Q&A, next business day reply",
+      "Priority 1:1 chat — next business day reply",
       "Label-reading workshop (90 min, recorded)",
       "AU brand audit library, updated quarterly",
       "Bonus modules on enrichment and rotation feeding",
@@ -103,4 +103,4 @@ export const successTiers = [
 ];
 
 export const programNote =
-  "Every tier includes the 60-day money-back guarantee. Prices in Australian dollars, GST inclusive. Cancel anytime — your plan is yours to keep. Edemic Pets is an educational nutrition program — not a veterinary service. For medical concerns, please see a registered Australian veterinarian.";
+  "Every tier includes the 60-day money-back guarantee. Prices in Australian dollars, GST inclusive. Cancel anytime — what you learn is yours to keep. Edemic Pets is an educational nutrition program — not a veterinary service. For medical concerns, please see a registered Australian veterinarian.";

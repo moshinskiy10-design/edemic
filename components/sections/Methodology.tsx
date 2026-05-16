@@ -7,16 +7,16 @@ const inside = [
     body: "Seven questions designed by a canine nutritionist — not a marketer. You get a type, not a tier.",
   },
   {
-    title: "A free 5-day email micro-course",
-    body: "Daily emails tuned to your dog's type. No upsell — these arrive whether you buy the program or not.",
+    title: "Free nutrition guides by email",
+    body: "Written guides tuned to your dog's eater type. No upsell — these arrive whether you buy the program or not.",
   },
   {
-    title: "A personalised written plan",
-    body: "After the quiz, you receive a written feeding plan built for your dog's eater type — clear steps, not a generic checklist.",
+    title: "1:1 mentorship in private chat — our USP",
+    body: "The heart of the program: direct chat access to Steffi, by the hand, every step. Photograph the bowl, send a label, ask anything — real answers from a canine nutritionist, not a chatbot.",
   },
   {
-    title: "Twelve focused video modules",
-    body: "Bite-sized lessons (5 hours total, no filler) covering anxious, bored, spoiled, and health-sensitive patterns.",
+    title: "Twelve focused nutrition modules",
+    body: "Video and written lessons (no filler) covering anxious, bored, spoiled, and health-sensitive patterns. Video is one option — the principles are what stick.",
   },
   {
     title: "Vet-first health routing",
@@ -34,7 +34,7 @@ export function Methodology() {
       <Reveal>
         <p className="eyebrow">What&rsquo;s inside</p>
         <h2 className="mt-3 max-w-3xl font-display text-h1 font-bold text-balance text-forest">
-          More than a course — a personalised plan, built around your dog.
+          More than a course — we make <em>you</em> the expert on your dog&rsquo;s bowl.
         </h2>
       </Reveal>
 

@@ -23,7 +23,7 @@ export const faqs: FAQ[] = [
   },
   {
     q: "How much support do I get?",
-    a: "Support is written, not over the phone. The free 5-day email micro-course arrives whether or not you upgrade. Optimal and Premium tiers add email Q&A access and a private Aussie-owner community. Everything is asynchronous and Aussie-time friendly.",
+    a: "The heart of Edemic Pets is 1:1 mentorship in a private chat with Steffi — by the hand, every step. Optimal and Premium tiers include direct chat access (2-business-day replies on Optimal, next-business-day on Premium) plus the private Aussie-owner community. Free nutrition guides arrive by email whether or not you upgrade. Everything is asynchronous and Aussie-time friendly.",
   },
   {
     q: "What's the money-back policy?",

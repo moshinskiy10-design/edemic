@@ -4,7 +4,7 @@ import { QuizFlow } from "@/components/quiz/QuizFlow";
 export const metadata: Metadata = {
   title: "Free 60-second quiz · Edemic Pets",
   description:
-    "Seven questions, one tap each. Find your dog's eater type and get a free personalised plan tuned for Australian households.",
+    "Seven questions, one tap each. Find your dog's eater type and get free nutrition guides tuned for Australian households.",
   robots: { index: true, follow: true },
 };
 

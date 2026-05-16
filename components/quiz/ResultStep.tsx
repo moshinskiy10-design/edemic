@@ -40,7 +40,7 @@ export function ResultStep({
         <div className="mb-8 rounded-lg border border-forest/20 bg-forest/5 px-5 py-4 text-sm text-offblack/85">
           <p>
             <strong className="text-forest">Sent.</strong> {name}&rsquo;s
-            personalised plan and the first email are on their way to{" "}
+            result and the first nutrition guide are on their way to{" "}
             <span className="font-semibold">{email}</span>. Check spam if it
             hasn&rsquo;t landed in 2 minutes.
           </p>
@@ -52,7 +52,7 @@ export function ResultStep({
         {name} is {articleFor(type.name)} {type.name}.
       </h1>
       <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-stone">
-        Plan tailored for {fullDescriptor}
+        Eater profile · {fullDescriptor}
       </p>
       <p className="mt-5 text-pretty text-lg leading-relaxed text-offblack/85">
         {type.oneLiner}
@@ -77,8 +77,9 @@ export function ResultStep({
           ))}
         </ul>
         <p className="mt-5 text-xs text-stone">
-          Your full written plan — feeding amounts, treat caps, AU brand
-          notes — is in your inbox. Look for an email from Steffi at Edemic.
+          Your free nutrition guides — feeding principles, treat caps, AU
+          brand notes — are in your inbox. Look for an email from Steffi at
+          Edemic.
         </p>
       </div>
 
@@ -92,7 +93,7 @@ export function ResultStep({
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-offblack/80">
           Built around the {type.name.toLowerCase()} pattern, with the full
-          curriculum, {name}&rsquo;s personalised written plan, and a{" "}
+          nutrition curriculum, 1:1 chat mentorship with Steffi, and a{" "}
           {site.guaranteeDays}-day money-back guarantee.
         </p>
 
@@ -129,8 +130,8 @@ export function ResultStep({
       </button>
 
       <p className="mt-10 rounded-lg bg-forest px-5 py-4 text-center text-sm text-cream">
-        Your first email arrives in under 2 minutes. Day 5 wraps the free
-        course — read those first, then decide.
+        Your first nutrition guide arrives in under 2 minutes. The full
+        series is yours to keep — read those, then decide.
       </p>
     </div>
   );

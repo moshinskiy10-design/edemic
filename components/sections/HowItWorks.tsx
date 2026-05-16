@@ -9,13 +9,13 @@ const steps = [
   },
   {
     n: "02",
-    title: "Get your plan",
-    body: "We match your dog to one of four eater types and send a free 5-day micro-course tailored to that type.",
+    title: "Get your nutrition guides",
+    body: "We match your dog to one of four eater types and email you free nutrition guides for that pattern — no upsell, no card needed.",
   },
   {
     n: "03",
-    title: "See the change",
-    body: "Most owners see their dog eating consistently inside three weeks — without changing brands or fighting at the bowl.",
+    title: "Become the expert",
+    body: "Inside the program, Steffi mentors you by the hand in a private chat. You learn the principles, build the bowl yourself, and most owners see the change inside three weeks.",
   },
 ];
 

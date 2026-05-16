@@ -10,12 +10,13 @@ export function FinalCTA() {
         <Reveal>
           <p className="eyebrow">One last nudge</p>
           <h2 className="mt-3 font-display text-h1 font-bold text-balance text-forest">
-            You&rsquo;ve scrolled this far. Sixty more seconds gets you a plan.
+            You&rsquo;ve scrolled this far. Sixty more seconds gets you started.
           </h2>
           <p className="mt-5 max-w-prose text-pretty text-lg text-offblack/80">
-            The quiz is the only homework. Everything else — the free 5-day
-            email micro-course tuned to your dog&rsquo;s eater type, and the{" "}
-            {site.guaranteeDays}-day money-back guarantee — is on us.
+            The quiz is the only homework. Everything else — free nutrition
+            guides tuned to your dog&rsquo;s eater type, 1:1 chat mentorship
+            with Steffi inside the program, and the {site.guaranteeDays}-day
+            money-back guarantee — is waiting on the other side.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
             <LinkButton href={quizHref} size="lg">

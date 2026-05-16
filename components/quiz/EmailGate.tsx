@@ -20,11 +20,12 @@ export function EmailGate({
     <div>
       <p className="eyebrow">Almost there</p>
       <h1 className="mt-3 font-display text-3xl font-bold text-balance text-forest md:text-4xl">
-        Where should we send your dog&rsquo;s plan?
+        Where should we send your dog&rsquo;s nutrition guides?
       </h1>
       <p className="mt-3 text-base leading-relaxed text-offblack/80">
-        Your personalised result lands in your inbox in under 2 minutes. The
-        free 5-day micro-course follows — no card needed, no upsell traps.
+        Your result lands in your inbox in under 2 minutes. Free nutrition
+        guides for your dog&rsquo;s eater type follow — no card needed, no
+        upsell traps.
       </p>
 
       <form
@@ -75,7 +76,7 @@ export function EmailGate({
           </li>
           <li className="flex items-start gap-3">
             <span className="mt-1 inline-block h-2 w-2 rounded-full bg-forest" />
-            No credit card needed — the 5-day plan is free.
+            No credit card needed — the nutrition guides are free.
           </li>
         </ul>
       </form>

@@ -1,7 +1,7 @@
 export const site = {
   brand: "Edemic Pets",
-  phone: "1300 333 642",
-  phoneDisplay: "1300 EDEMIC (1300 333 642)",
+  phone: "+61 480 053 917",
+  phoneDisplay: "+61 480 053 917",
   hours: "Mon–Fri 9am–5pm AEST",
   voicemail: "Voicemail returned same day",
   founder: {
@@ -13,7 +13,7 @@ export const site = {
       "I'm Steffi — based in regional Victoria, raising my own Kelpie, Daisy. I started Edemic after watching dozens of friends' dogs go off their food and chase down expensive 'premium' kibble that never solved the real issue. Picky eating almost always traces back to one of four patterns. Find your dog's pattern and the rest gets simple.",
     photoCaption: "Steffi & Daisy, Bendigo VIC",
   },
-  quote: "Find your dog's eater type in 60 seconds and get a free personalised plan.",
+  quote: "Find your dog's eater type in 60 seconds and get free nutrition guides.",
   guaranteeDays: 60,
   legalName: "Edemic Pty Ltd",
   abn: "12 345 678 901",

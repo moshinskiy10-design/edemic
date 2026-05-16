@@ -15,8 +15,8 @@ export function PreQuizCTA() {
             Find your dog&rsquo;s eater type.
           </h2>
           <p className="mt-6 text-pretty text-lg text-cream/85">
-            Seven questions. One result. A free 5-day micro-course mailed to you
-            — even if you never spend a cent.
+            Seven questions. One result. Free nutrition guides mailed to your
+            inbox — even if you never spend a cent.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4">
             <LinkButton href={quizHref} size="lg" variant="coral">

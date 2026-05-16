@@ -91,8 +91,8 @@ export function QuizFlow() {
   function submitEmail() {
     if (!isValidEmail(email)) return;
     // Stub: in production this hits ConvertKit/Klaviyo/Formspree and triggers
-    // the personalised plan email (using dog name, age, breed, weight, notes
-    // alongside the computed eater type).
+    // the nutrition-guides email sequence (using dog name, age, breed, weight,
+    // notes alongside the computed eater type).
     if (typeof window !== "undefined") {
       try {
         window.localStorage.setItem(
@@ -268,7 +268,7 @@ export function QuizFlow() {
               size="lg"
               className="min-w-[180px]"
             >
-              Email my plan →
+              Email my guides →
             </Button>
           )}
         </footer>

@@ -51,14 +51,14 @@ export function DogDetailsStep({
 
   return (
     <div>
-      <p className="eyebrow">Last bit · Personalise your plan</p>
+      <p className="eyebrow">Last bit · Personalise your guides</p>
       <h1 className="mt-3 font-display text-3xl font-bold text-balance text-forest md:text-4xl">
         Tell us about your dog.
       </h1>
       <p className="mt-3 text-base leading-relaxed text-offblack/80">
-        These details let us tailor the written plan we email you — feeding
-        amounts, treat caps, and the ingredient guide all use your dog&rsquo;s
-        age, breed, and weight.
+        These details let us tune the nutrition guides we email you — feeding
+        principles, treat caps, and the ingredient guide all reference your
+        dog&rsquo;s age, breed, and weight.
       </p>
 
       <div className="mt-8 space-y-5">
